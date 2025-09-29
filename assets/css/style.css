@@ -67,7 +67,7 @@
   --vegas-gold: hsl(45, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
-  --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --dark-blue: #27AE60;
 
   /**
    * typography
@@ -946,6 +946,43 @@ main {
   animation: scaleUp 0.25s ease forwards;
 }
 
+.project-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    line-height: 1.6;
+}
+.project-description {
+    color: var(--light-gray);
+    /* Use your theme's light text color */
+    font-size: var(--fs-6);
+    /* Match category font size */
+    font-weight: var(--fw-300);
+    /* Light font weight */
+    line-height: 1.4;
+    margin: 5px 10px 0;
+    /* Match category margins */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.project-description {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+.project-content {
+    padding: 5px 0;
+}  
+
 @keyframes scaleUp {
   0% { transform: scale(0.5); }
   100% { transform: scale(1); }
@@ -1541,7 +1578,39 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+/* Languages*/
+.languages-title{
+  margin-bottom: 20px;
+} 
 
+.languages-list {
+  padding: 20px;
+}
+
+.languages-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.languages-item {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.languages-list {
+  padding: 15px;
+}
+
+.languages-item {
+  word-break: break-word;
+}
+
+.languages-category {
+  color: var(--vegas-gold);
+  font-weight: var(--fw-500);
+}
 
 
 
@@ -1878,5 +1947,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+
+  .timeline-text.job-title {
+    font-weight: var(--fw-500);
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+  }
 
 }
